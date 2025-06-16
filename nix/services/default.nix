@@ -1,0 +1,8 @@
+{...}:
+{
+  imports = [
+    ./mysql
+    ./temporal
+    ./kafka
+  ];
+}
