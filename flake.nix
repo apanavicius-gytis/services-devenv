@@ -29,18 +29,13 @@
           {
             default = devenv.lib.mkShell {
               inherit inputs pkgs;
-              devenv.dotenv.enable = true;
               modules = [
                 {
+                  dotenv.enable = true;
+
                   imports = [
-                    ./nix/services
+                    ./services
                   ];
-
-                  enterShell = ''
-                    echo "bruh"
-                  '';
-
-                  processes.hello.exec = "hello";
                 }
               ];
             };
