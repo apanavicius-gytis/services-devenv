@@ -1,3 +1,4 @@
+run services: `nix develop --no-pure-eval --command devenv up`
 WORK IN PROGRESS WORK IN PROGRESS WORK IN PROGRESS WORK IN PROGRESS WORK IN PROGRESS
 # Services devenv
 Not to be used on it's own, fork this repo and tailor it to your infrastructure specificaly.
