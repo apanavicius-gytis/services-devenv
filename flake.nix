@@ -31,7 +31,10 @@
               inherit inputs pkgs;
               modules = [
                 {
-                  dotenv.enable = true;
+                  dotenv = {
+                    enable = true;
+                    filename = [".env.local" ".env"];
+                  };
 
                   imports = [
                     ./services
