@@ -4,5 +4,6 @@
     ./mysql
     ./temporal
     ./kafka
+    ./redis
   ];
 }
