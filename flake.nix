@@ -21,6 +21,10 @@
         devenv-test = self.devShells.${system}.default.config.test;
       });
 
+     tasks = {
+       "devenv:gover".exec = "go version";
+     };
+
       devShells = forEachSystem
         (system:
           let
@@ -39,6 +43,12 @@
                   imports = [
                     ./services
                   ];
+
+                  tasks = {
+                    "whoami" = {
+                      exec = "whoami";
+                    };
+                  };
                 }
               ];
             };
